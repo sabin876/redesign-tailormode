@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Add Font Awesome CSS (you can download it or use a CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        /* CSS to style the button */
+        #showTextAreaButton {
+            background-color:white;
+            color: #095a5b;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size:20px;
+            cursor: pointer;
+            border:2px solid #095a5b;
+            top:30%;
+        }
+
+        /* CSS to initially hide the text area */
+        #textArea {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="showTextAreaButton">
+        <span class="fa-regular fa-clipboard" style="color: #154dac;"></span> I want to describe my preferred tour
+    </button>
+    <div id="textAreaContainer">
+        <textarea id="textArea" rows="4" cols="50"></textarea>
+    </div>
+
+    <script>
+        // JavaScript to toggle the visibility of the text area
+        const showTextAreaButton = document.getElementById("showTextAreaButton");
+        const textArea = document.getElementById("textArea");
+
+        showTextAreaButton.addEventListener("click", function() {
+            if (textArea.style.display === "none") {
+                textArea.style.display = "block";
+            } else {
+                textArea.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
